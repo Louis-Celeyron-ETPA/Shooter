@@ -1544,6 +1544,8 @@ GameObject:
   - component: {fileID: 983346836}
   - component: {fileID: 983346835}
   - component: {fileID: 983346837}
+  - component: {fileID: 983346839}
+  - component: {fileID: 983346838}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -1631,9 +1633,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a83c22b32dead749948ae2b29252a82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 6470470209835675063, guid: a56b1226008b30644bcf65814b9bb2e6, type: 3}
   parent: {fileID: 234670887}
   speed: 0.02
+--- !u!114 &983346838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983346834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afcd84f525da2146a50648b3b1090e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 6470470209835675063, guid: a56b1226008b30644bcf65814b9bb2e6, type: 3}
+  parent: {fileID: 234670887}
+--- !u!114 &983346839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983346834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca5ab7f62d71e24ba0aa64d0eb628af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limitL: {fileID: 1923840854}
+  limitR: {fileID: 1899504735}
 --- !u!1001 &995040884
 PrefabInstance:
   m_ObjectHideFlags: 0

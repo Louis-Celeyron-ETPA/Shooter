@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public Rigidbody2D monRigidBody;
     public float speed;
+    public GameObject vfx;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,13 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(collision.gameObject);
+        Enemy enemyCollided = collision.gameObject.GetComponent<Enemy>();
+        if(enemyCollided == true)
+        {
+            enemyCollided.ReduceHP();
+        }
+        
+        Instantiate(vfx, transform.position, vfx.transform.rotation);
         Destroy(gameObject);
     }
 

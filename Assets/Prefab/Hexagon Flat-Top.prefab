@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6488187506806844336}
   - component: {fileID: 7648189001331404202}
   - component: {fileID: 8650566655662361808}
+  - component: {fileID: 1047202051462020350}
   m_Layer: 0
   m_Name: Hexagon Flat-Top
   m_TagString: Untagged
@@ -136,3 +137,19 @@ PolygonCollider2D:
       - {x: 0.5, y: 0}
       - {x: 0.25, y: 0.43359375}
   m_UseDelaunayMesh: 0
+--- !u!114 &1047202051462020350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6128441405271233860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbec774f6f1092749861086ab916515d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 7648189001331404202}
+  highHPColor: {r: 0.3213332, g: 0.8207547, b: 0.33081365, a: 1}
+  lowHPColor: {r: 0.8207547, g: 0.23616053, b: 0.23616053, a: 1}
+  hpMax: 5
