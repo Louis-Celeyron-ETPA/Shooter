@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7648189001331404202}
   - component: {fileID: 8650566655662361808}
   - component: {fileID: 1047202051462020350}
+  - component: {fileID: 3725658920480884520}
   m_Layer: 0
   m_Name: Hexagon Flat-Top
   m_TagString: Untagged
@@ -153,3 +154,34 @@ MonoBehaviour:
   highHPColor: {r: 0.3213332, g: 0.8207547, b: 0.33081365, a: 1}
   lowHPColor: {r: 0.8207547, g: 0.23616053, b: 0.23616053, a: 1}
   hpMax: 5
+  vfxPrefab: {fileID: 3430638114296732427, guid: 3eef02f0ba9ed484ca169e21e3035cfb, type: 3}
+  enemyRigidbody2D: {fileID: 3725658920480884520}
+  startRight: 0
+  speed: 0.2
+--- !u!50 &3725658920480884520
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6128441405271233860}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

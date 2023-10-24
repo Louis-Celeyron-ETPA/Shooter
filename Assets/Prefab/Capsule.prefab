@@ -165,6 +165,7 @@ MonoBehaviour:
   monRigidBody: {fileID: 6863447708074395207}
   speed: 12
   vfx: {fileID: 3430638114296732427, guid: ee6230cf0b3b04b47b25ee11b7ec8e79, type: 3}
+  maxLifeTime: 1
 --- !u!96 &5144115588052714144
 TrailRenderer:
   serializedVersion: 3
