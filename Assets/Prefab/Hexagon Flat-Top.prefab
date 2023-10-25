@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3725658920480884520}
   - component: {fileID: -7615020307179599816}
   - component: {fileID: -5998410386862764855}
+  - component: {fileID: 3790648786737826009}
   m_Layer: 0
   m_Name: Hexagon Flat-Top
   m_TagString: Untagged
@@ -157,7 +158,8 @@ MonoBehaviour:
   lowHPColor: {r: 0.70980394, g: 0.5137255, b: 0.28235295, a: 1}
   hpMax: 5
   vfxPrefab: {fileID: 3430638114296732427, guid: 3eef02f0ba9ed484ca169e21e3035cfb, type: 3}
-  speed: 0.2
+  scoreManagerReference: {fileID: 0}
+  speed: 0.7
 --- !u!50 &3725658920480884520
 Rigidbody2D:
   serializedVersion: 4
@@ -215,3 +217,24 @@ MonoBehaviour:
   horizontalSide: 1
   movementRef: {fileID: -7615020307179599816}
   timerMax: 2
+--- !u!95 &3790648786737826009
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6128441405271233860}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4daca32e96a7a9f4db64b6db1d52ec41, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

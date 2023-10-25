@@ -6,18 +6,16 @@ public class Shooter : MonoBehaviour
 {
     public GameObject bullet;
     public Transform parent;
-
-    // Update is called once per frame
-    void Update()
+    public float timerMax = 0.5f;
+    private float timerBetTwoBullets;
+  
+    public void SpawnBullet()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        timerBetTwoBullets -= Time.deltaTime;
+        if(timerBetTwoBullets<=0)
         {
-            SpawnBullet();
+            Instantiate(bullet, parent.position, parent.rotation);
+            timerBetTwoBullets = timerMax;
         }
-    }
-
-    private void SpawnBullet()
-    {
-        Instantiate(bullet, parent.position, parent.rotation);
     }
 }

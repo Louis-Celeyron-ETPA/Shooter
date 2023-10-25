@@ -8,12 +8,18 @@ public class Controls : MonoBehaviour
     public KeyCode left, right, shoot;
 
     public Movement movementRef;
-
+    public Shooter shooterRef;
     private bool leftPressed,rightPressed;
 
     void Update()
     {
-        if(Input.GetKeyDown(left))
+        CheckMovement();
+        CheckShoot();
+    }
+
+    private void CheckMovement()
+    {
+        if (Input.GetKeyDown(left))
         {
             movementRef.SetDirection(Vector2.left);
             leftPressed = true;
@@ -21,7 +27,7 @@ public class Controls : MonoBehaviour
         if (Input.GetKeyUp(left))
         {
             leftPressed = false;
-            if(rightPressed == true)
+            if (rightPressed == true)
             {
                 movementRef.SetDirection(Vector2.right);
             }
@@ -35,16 +41,23 @@ public class Controls : MonoBehaviour
         if (Input.GetKeyUp(right))
         {
             rightPressed = false;
-            if (leftPressed== true)
+            if (leftPressed == true)
             {
                 movementRef.SetDirection(Vector2.left);
             }
         }
 
 
-        if(rightPressed == false && leftPressed == false)
+        if (rightPressed == false && leftPressed == false)
         {
             movementRef.Stop();
+        }
+    }
+    private void CheckShoot()
+    {
+        if(Input.GetKey(shoot))
+        {
+            shooterRef.SpawnBullet();
         }
     }
 }

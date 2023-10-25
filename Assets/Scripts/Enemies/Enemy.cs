@@ -38,6 +38,7 @@ public class Enemy : MonoBehaviour
         //Si mes PV sont inferieur ou égal à 0 je meurs
         if (currentHP<=0) 
         {
+            scoreManagerReference.AddScore(10);
             Die();
         }
     }
@@ -45,11 +46,20 @@ public class Enemy : MonoBehaviour
     //Fonction de mort
     public void Die() 
     {
-        scoreManagerReference.AddScore(10);
-
         var deathVfx = Instantiate(vfxPrefab, transform.position, vfxPrefab.transform.rotation);
         ParticleSystem.MainModule module = deathVfx.GetComponent<ParticleSystem>().main;
         module.startColor = spriteRenderer.color;        
         Destroy(gameObject); // Je me detruit
+    }
+
+    //Se détruit au contact du joueur mais lui inflige des dégats
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        HPPlayer player = collision.GetComponent<HPPlayer>();
+        if(player == true)
+        {
+            player.ReduceHP();
+        }
+        Die();
     }
 }
