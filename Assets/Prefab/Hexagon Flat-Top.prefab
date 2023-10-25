@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8650566655662361808}
   - component: {fileID: 1047202051462020350}
   - component: {fileID: 3725658920480884520}
+  - component: {fileID: -7615020307179599816}
+  - component: {fileID: -5998410386862764855}
   m_Layer: 0
   m_Name: Hexagon Flat-Top
   m_TagString: Untagged
@@ -151,12 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7648189001331404202}
-  highHPColor: {r: 0.3213332, g: 0.8207547, b: 0.33081365, a: 1}
-  lowHPColor: {r: 0.8207547, g: 0.23616053, b: 0.23616053, a: 1}
+  highHPColor: {r: 0.6, g: 0.70980394, b: 0.28235295, a: 1}
+  lowHPColor: {r: 0.70980394, g: 0.5137255, b: 0.28235295, a: 1}
   hpMax: 5
   vfxPrefab: {fileID: 3430638114296732427, guid: 3eef02f0ba9ed484ca169e21e3035cfb, type: 3}
-  enemyRigidbody2D: {fileID: 3725658920480884520}
-  startRight: 0
   speed: 0.2
 --- !u!50 &3725658920480884520
 Rigidbody2D:
@@ -185,3 +185,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-7615020307179599816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6128441405271233860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a83c22b32dead749948ae2b29252a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRigidbody2D: {fileID: 3725658920480884520}
+  initialDirection: {x: 0, y: 0}
+  speed: 0.2
+--- !u!114 &-5998410386862764855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6128441405271233860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d350ed612278f6409bae0eb5937a97b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalSide: 1
+  movementRef: {fileID: -7615020307179599816}
+  timerMax: 2

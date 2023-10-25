@@ -4,27 +4,23 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public Transform parent;
-    public float speed = 0.2f;
+    public Rigidbody2D myRigidbody2D;
+    public Vector2 initialDirection;
+    public float speed = 7;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        if(Input.GetKey(KeyCode.LeftArrow))
-        {
-            Move(Vector3.left);
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            Move(Vector3.right);
-        }
-      
+        SetDirection(initialDirection);
     }
 
-    private void Move(Vector3 direction)
+    public void SetDirection(Vector2 direction)
     {
-        transform.position += direction * speed;
+        myRigidbody2D.velocity = direction * speed;
     }
 
+    public void Stop()
+    {
+        myRigidbody2D.velocity = Vector2.zero;
+    }
 
 }
