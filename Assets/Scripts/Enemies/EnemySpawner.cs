@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Spawn(Enemy enemyPrefab)
     {
-        
-    }
+        Instantiate(enemyPrefab, transform.position, transform.rotation);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

@@ -159,7 +159,6 @@ MonoBehaviour:
   hpMax: 5
   vfxPrefab: {fileID: 3430638114296732427, guid: 3eef02f0ba9ed484ca169e21e3035cfb, type: 3}
   scoreManagerReference: {fileID: 0}
-  speed: 0.7
 --- !u!50 &3725658920480884520
 Rigidbody2D:
   serializedVersion: 4
@@ -200,8 +199,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidbody2D: {fileID: 3725658920480884520}
-  initialDirection: {x: 0, y: 0}
-  speed: 0.2
+  initialDirection: {x: 0.5, y: 0.5}
+  speed: 2.3
 --- !u!114 &-5998410386862764855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,9 +213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d350ed612278f6409bae0eb5937a97b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSide: 1
+  range: 4
   movementRef: {fileID: -7615020307179599816}
-  timerMax: 2
 --- !u!95 &3790648786737826009
 Animator:
   serializedVersion: 5

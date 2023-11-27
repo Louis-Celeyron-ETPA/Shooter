@@ -4,22 +4,14 @@ using UnityEngine;
 
 public class AutomaticAlternateMovement : MonoBehaviour
 {
-    [Range(-1,1)]
-    public int horizontalSide = 1;
+    [Range(0.01f,4)]
+    public float range = 4;
     public Movement movementRef;
-    private float timer = 0;
-    public float timerMax = 2;
 
 
     private void Update()
     {
-        timer -= Time.deltaTime;
-        if (timer <= 0)
-        {
-            movementRef.SetDirection(Vector2.down + Vector2.right*horizontalSide);
-            horizontalSide *= -1;
-            timer = timerMax;
-        }
+        movementRef.SetDirection(Vector2.down + Vector2.right*Mathf.Sin(Time.time*range));
     }
 
 }

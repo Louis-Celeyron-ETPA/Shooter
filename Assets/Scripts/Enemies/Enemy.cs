@@ -12,9 +12,6 @@ public class Enemy : MonoBehaviour
 
     public ScoreManager scoreManagerReference;
 
-    public float speed = 0.5f;
-
-
     private int currentHP;
 
     private void Start()
